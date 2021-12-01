@@ -21,7 +21,9 @@ for(let i=0;i<dob.length;i++){
 return sum;
 }
 function compareValues(sum,luckyNumber){
-    if(luckyNumber>1){
+     if(luckyNumber<1){
+        outputBox.innerText="invalid input"
+        }else{
 if(sum %luckyNumber===0){
     outputBox.innerText=("Your birthday is lucky.")
 }else{
