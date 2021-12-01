@@ -25,9 +25,9 @@ function compareValues(sum,luckyNumber){
         outputBox.innerText="invalid input"
         }else{
 if(sum %luckyNumber===0){
-    outputBox.innerText=("Your birthday is lucky.")
+    outputBox.innerText="Your birthday is lucky."
 }else{
-    outputBox.innerText=("Your birthday is not lucky,u make ur own luck.")
+    outputBox.innerText="Your birthday is not lucky,u make ur own luck."
 }
     }
 }
