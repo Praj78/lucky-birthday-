@@ -1,28 +1,28 @@
-const dateOfBirth =document.querySelector("#date-of-birth");
-const luckyNumber=document.querySelector("#lucky-number");
-const checkNumberButton=document.querySelector("#check-number");
-const outputBox=document.querySelector("#output-box")
-checkNumberButton.addEventListener("click",checkBirthDateIsLucky);
+var dateOfBirth =document.querySelector("#date-of-birth");
+var luckyNumber=document.querySelector("#lucky-number");
+var checkNumberButton=document.querySelector("#check-number");
+var outputBox=document.querySelector("#output-box")
+
 
 function checkBirthDateIsLucky(){
-     outputBox.innerHTML = '';
-const dob =dateOfBirth.value;
-const sum =calculateSum(dob);
+    outputBox.innerHTML="";
+var dob =dateOfBirth.value;
+var sum =calculateSum(dob);
 if(sum&&dob)
 compareValues(sum,luckyNumber.value);
 else
-outputBox.innerText="Please enter both date of birth  and lucky number"
+outputBox.innerHTML="Please enter both date of birth  and lucky number"
 }
 function calculateSum(dob){
 dob=dob.replaceAll("-","");
-let sum =0;
+var sum =0;
 for(let i=0;i<dob.length;i++){
     sum=sum+Number(dob.charAt(i));
 }
 return sum;
 }
 function compareValues(sum,luckyNumber){
-     if(luckyNumber<1){
+    if(Number(luckyNumber)<1){
         outputBox.innerHTML="invalid input"
         }else{
 if(sum %luckyNumber===0){
@@ -32,3 +32,4 @@ if(sum %luckyNumber===0){
 }
     }
 }
+checkNumberButton.addEventListener("click",checkBirthDateIsLucky);
